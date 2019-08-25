@@ -9,6 +9,6 @@ server({security: { csrf: false }}, [
   get('/', ctx => 'Hello world'),
   post('/', ctx => {
     console.log(ctx.data);
-    return json({body: ctx.data});
+    return json({requestBody: ctx.data});
   })
 ]);
